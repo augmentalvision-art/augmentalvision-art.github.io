@@ -1,11 +1,94 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Left 2 Die – Augmental Vision</title><meta name="description" content="Left 2 Die, a co-op zombie shooter for Android by Augmental Vision.">
-<link rel="stylesheet" href="style.css"></head><body>
-<header><a href="./"><h1 class="logo">LEFT 2 DIE</h1></a><nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a><a href="delete-account.html">Delete Account</a></nav></header>
-<main>
-<section><h2>Action co-op zombie shooter</h2>
-<p>Team up with friends online, fight through campaigns, unlock skins and pets, and try to survive the horde.</p>
-<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.PlanZ.Left2Die">Get it on Google Play</a></p></section>
-<section><h2>Support</h2><p>Questions, bugs or account help: <a href="mailto:augmentalvision@gmail.com">augmentalvision@gmail.com</a></p></section>
-</main><footer>© 2026 Augmental Vision</footer></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YCrew Vision – Mobile Games</title>
+<meta name="description" content="YCrew Vision makes mobile games for Android: Left 2 Die, Toon Cat Horror School and Memoryna: Second Dawn.">
+<style>
+:root{--bg:#0f1220;--card:#181c30;--line:#262b45;--text:#eef0f7;--muted:#9aa1bd;--accent:#e2364b;--accent2:#3cc6c0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent2)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.mark{width:40px;height:40px;position:relative}
+.mark span{position:absolute;display:block}
+.mark .a{width:40px;height:40px;border-radius:50%;background:var(--accent)}
+.mark .b{width:18px;height:18px;border-radius:4px;background:var(--accent2);right:-4px;bottom:-4px;transform:rotate(45deg)}
+.brand b{font-size:20px;letter-spacing:.06em}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:15px}
+nav a:hover{color:var(--text)}
+.hero{padding:64px 0 40px}
+.hero h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:0 0 14px}
+.hero p{color:var(--muted);max-width:560px;margin:0;font-size:18px}
+h2{font-size:22px;margin:40px 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column}
+.tag{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--bg);background:var(--accent2);border-radius:999px;padding:2px 10px;align-self:flex-start}
+.tag.soon{background:#f2b33d}
+.card h3{margin:12px 0 6px;font-size:20px}
+.card p{color:var(--muted);margin:0 0 16px;flex:1}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:10px 16px;border-radius:10px;font-weight:600;text-align:center}
+.links{margin-top:12px;font-size:14px}
+.links a{margin-right:14px}
+.contact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+footer{border-top:1px solid var(--line);margin-top:56px;color:var(--muted);font-size:14px}
+footer .wrap{padding-top:20px;padding-bottom:28px}
+@media (max-width:560px){nav a{margin:0 14px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="./"><div class="mark"><span class="a"></span><span class="b"></span></div><b>YCREW VISION</b></a>
+  <nav><a href="#games">Games</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main class="wrap">
+<section class="hero">
+  <h1>Small studio.<br>Big scares, big fights.</h1>
+  <p>YCrew Vision makes mobile games for Android: zombie co-op, cartoon horror and anime RPGs.</p>
+</section>
+
+<section id="games">
+<h2>Our games</h2>
+<div class="grid">
+  <div class="card">
+    <span class="tag">On Google Play</span>
+    <h3>Left 2 Die</h3>
+    <p>Co-op zombie shooter. Team up online, fight through campaigns, unlock skins and pets, and survive the horde.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.PlanZ.Left2Die">Get it on Google Play</a>
+    <div class="links"><a href="privacy.html">Privacy Policy</a><a href="delete-account.html">Delete Account</a></div>
+  </div>
+  <div class="card">
+    <span class="tag">On Google Play</span>
+    <h3>Toon Cat Horror School</h3>
+    <p>Cartoon horror survival. Can you make it out of school alive?</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.augmentalvision.cartooncatgame">Get it on Google Play</a>
+    <div class="links"><a href="toon-cat-privacy.html">Privacy Policy</a></div>
+  </div>
+  <div class="card">
+    <span class="tag soon">Coming soon</span>
+    <h3>Memoryna: Second Dawn</h3>
+    <p>Turn-based anime RPG where every enemy attack is a duel. Parry. Counter. Remember. Android closed beta coming soon.</p>
+    <a class="btn" href="memoryna/">Learn more</a>
+    <div class="links"><a href="memoryna/privacy.html">Privacy Policy</a></div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="contact">
+  <p style="margin:0">Support, bugs, account help or business inquiries: <a href="mailto:info@dustinpeace.com">info@dustinpeace.com</a></p>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  © 2026 YCrew Vision. YCrew Vision is operated by Dust In Peace LLC.
+</div></footer>
+</body>
+</html>

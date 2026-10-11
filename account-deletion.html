@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request account deletion — YCrew Games</title>
+<meta name="description" content="Request deletion of your YCrew Games account and associated game data without reinstalling the game.">
+<style>
+:root{color-scheme:dark;--bg:#0f1220;--card:#181c30;--line:#363c5d;--text:#eef0f7;--muted:#b8bed3;--accent:#3cc6c0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 system-ui,sans-serif}.wrap{max-width:760px;margin:auto;padding:24px}header,footer{border-bottom:1px solid var(--line)}footer{border-top:1px solid var(--line);border-bottom:0;margin-top:36px}a{color:var(--accent)}h1{font-size:clamp(28px,6vw,42px);line-height:1.2}h2{font-size:23px}p,li{color:var(--muted)}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}label{display:block;margin:18px 0 6px}input,select,button{font:inherit;width:100%;padding:13px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text)}button{background:var(--accent);color:#091817;font-weight:700;cursor:pointer;margin-top:24px}:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.hint{font-size:15px}#status{min-height:2em;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="./">YCrew Games</a><p><a href="dead-leveling-terms.html">Dead Leveling Terms</a> · <a href="dead-leveling-privacy.html">Dead Leveling Privacy</a></p></div></header>
+<main class="wrap">
+<h1>Request account deletion</h1>
+<p>YCrew Games is operated by Dust In Peace LLC. You can request deletion of your game account and associated data by email, even if you no longer have the game installed.</p>
+<section class="card" aria-labelledby="request-heading">
+<h2 id="request-heading">Start your request</h2>
+<form id="deletion-form">
+<label for="game">Game</label>
+<select id="game" name="game"><option>Dead Leveling</option><option>Fabled Oath: Second Dawn</option><option>Left 2 Die</option><option>Other YCrew game</option></select>
+<label for="player">Player ID, if known</label>
+<input id="player" name="player" maxlength="160" autocomplete="off" aria-describedby="player-hint">
+<p class="hint" id="player-hint">In Dead Leveling, find your player ID under Settings → Account &amp; Cloud → Delete Account. You can leave this blank if you cannot access the game.</p>
+<label for="signin">Sign-in email or username, if known</label>
+<input id="signin" name="signin" maxlength="160" autocomplete="off">
+<p class="hint">Never include your password, verification codes or payment card details. These fields stay in this page until you choose to open an email draft; this page does not send or upload them.</p>
+<button type="submit">Open deletion request email</button>
+<p id="status" role="status" aria-live="polite">Review and send the draft in your email app. Opening a draft does not submit a request or delete an account.</p>
+</form>
+<p>If the button does not open an email app, email <a href="mailto:augmentalvision@gmail.com?subject=Game%20account%20deletion%20request">augmentalvision@gmail.com</a> with the game name and your player ID or sign-in email.</p>
+</section>
+<h2>What happens next</h2>
+<p>Support will verify account ownership and confirm the deletion steps and expected completion time. Where possible, send the request from the email linked to your game account. You do not need to reinstall the game to make a request.</p>
+<h2>What your request covers</h2>
+<p>Request removal of your game account, linked sign-in identifiers and associated saved progress, including inventory and game currencies. If any records must be retained, ask support to explain which records, why, and for how long.</p>
+<p>This request does not delete your Google, Apple or email account. Those providers manage their own accounts and purchase records.</p>
+<h2>From Dead Leveling</h2>
+<p>Open Settings → Account &amp; Cloud → Delete Account → Email Deletion Request. Review and send the email to support. This is a deletion request, not an instant account wipe.</p>
+</main>
+<footer><div class="wrap">© 2026 YCrew Games · <a href="https://augmentalvision-art.github.io/">Home</a></div></footer>
+<script>
+'use strict';
+document.getElementById('deletion-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const game = document.getElementById('game').value;
+  const player = document.getElementById('player').value.trim();
+  const signin = document.getElementById('signin').value.trim();
+  const body = 'Please delete my ' + game + ' account and its associated data.\n\nPlayer ID: ' + (player || '[unknown]') + '\nSign-in email or username: ' + (signin || '[please add if known]') + '\n\nPlease confirm the verification steps, expected completion time, and whether any records must be retained.';
+  window.location.href = 'mailto:augmentalvision@gmail.com?subject=' + encodeURIComponent('Delete my ' + game + ' account') + '&body=' + encodeURIComponent(body);
+  document.getElementById('status').textContent = 'Your email app may open a draft. You still need to review and send it. If nothing opens, use the support email link below.';
+});
+</script>
+</body>
+</html>
